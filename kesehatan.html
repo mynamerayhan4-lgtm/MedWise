@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek tekanan darah dan gula darah – Medwise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header"><div class="wrap bar"><a class="logo" href="index.html">Med<span>wise</span></a><nav class="nav" style="display:flex"><a href="resep.html">Baca resep</a><a href="obat.html">Semua obat</a></nav></div></header>
+    <main class="wrap page">
+        <h1>Cek tekanan darah dan gula darah</h1>
+        <p class="muted">Masukkan hasil ukur dari alat atau laboratorium, lalu lihat artinya. Alat ini tidak mengukur tubuhmu dan tidak menggantikan diagnosis dokter.</p>
+        <section class="panel sec" id="tensi">
+            <h2>Tekanan darah (mmHg)</h2>
+            <p><label>Sistolik <input type="number" id="sis" min="50" max="300" placeholder="120"></label>
+               <label>Diastolik <input type="number" id="dia" min="30" max="200" placeholder="80"></label>
+               <button class="btn" id="cTensi" type="button">Cek</button></p>
+            <div id="rTensi"></div>
+        </section>
+        <section class="panel sec" id="gula">
+            <h2>Gula darah</h2>
+            <p><label>Jenis pemeriksaan
+                <select id="jenis">
+                    <option value="puasa">Gula darah puasa (mg/dL)</option>
+                    <option value="ttgo">2 jam setelah beban glukosa 75 g (mg/dL)</option>
+                    <option value="sewaktu">Gula darah sewaktu (mg/dL)</option>
+                    <option value="hba1c">HbA1c (%)</option>
+                </select></label>
+               <label>Nilai <input type="number" id="nilai" step="0.1" placeholder="95"></label>
+               <button class="btn" id="cGula" type="button">Cek</button></p>
+            <div id="rGula"></div>
+        </section>
+        <section class="panel sec">
+            <h2>Riwayat di browser ini</h2>
+            <div id="riwayat"></div>
+            <p><button class="btn line" id="hapus" type="button">Hapus riwayat</button></p>
+        </section>
+        <p class="muted">Rujukan klasifikasi: tekanan darah mengikuti kategori ESC/ESH 2018 yang dipakai konsensus PERHI, gula darah mengikuti kriteria PERKENI dan ADA. Satu kali ukur belum cukup untuk diagnosis. Pastikan pengukuran sesuai petunjuk alat dan ulangi di waktu berbeda.</p>
+    </main>
+    <footer class="site-footer"><div class="wrap"><p>Informasi di situs ini bersifat edukasi dan tidak menggantikan saran dokter atau apoteker.</p><p>© 2026 Medwise</p></div></footer>
+    <script src="language.js"></script>
+    <script src="kesehatan.js"></script>
+</body>
+</html>

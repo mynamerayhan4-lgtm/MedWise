@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar obat saya – Medwise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header"><div class="wrap bar"><a class="logo" href="index.html">Med<span>wise</span></a><nav class="nav" style="display:flex"><a href="resep.html">Baca resep</a><a href="obat.html">Semua obat</a></nav></div></header>
+    <main class="wrap page">
+        <h1>Daftar obat saya</h1>
+        <p class="muted">Catat obat yang kamu minum. Daftar ini hanya tersimpan di browser ini dan tidak dikirim ke mana pun. Medwise otomatis memeriksa interaksi antar obat di daftarmu.</p>
+        <section class="panel sec">
+            <h2>Tambah obat</h2>
+            <p><label>Nama obat <input id="nama" list="daftar" placeholder="mis. Metformin"></label>
+               <label>Dosis <input id="dosis" placeholder="mis. 500 mg"></label>
+               <label>Aturan pakai <input id="aturan" placeholder="mis. 2x sehari sesudah makan"></label>
+               <label>Catatan <input id="catatan" placeholder="opsional"></label></p>
+            <datalist id="daftar"></datalist>
+            <button class="btn" id="tambahObat" type="button">Tambah</button> <span id="msg" class="muted"></span>
+        </section>
+        <section class="panel sec"><h2>Obat yang kamu minum</h2><div id="daftarSaya"></div>
+            <p><button class="btn line" id="salin" type="button">Salin daftar untuk ditunjukkan ke dokter</button></p></section>
+        <section class="panel sec"><h2>Interaksi dalam daftarmu</h2><div id="interaksiSaya"></div></section>
+    </main>
+    <footer class="site-footer"><div class="wrap"><p>Informasi di situs ini bersifat edukasi dan tidak menggantikan saran dokter atau apoteker.</p><p>© 2026 Medwise</p></div></footer>
+    <script src="data%20(3).js"></script>
+    <script src="data-en.js"></script>
+    <script src="interaksi.js"></script>
+    <script src="language.js"></script>
+    <script src="engine.js"></script>
+    <script src="saya.js"></script>
+</body>
+</html>

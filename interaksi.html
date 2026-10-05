@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek interaksi obat – Medwise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header"><div class="wrap bar"><a class="logo" href="index.html">Med<span>wise</span></a><nav class="nav" style="display:flex"><a href="resep.html">Baca resep</a><a href="obat.html">Semua obat</a></nav></div></header>
+    <main class="wrap page">
+        <h1>Cek interaksi obat</h1>
+        <p class="muted">Pilih dua obat atau lebih yang dipakai bersamaan, lalu lihat interaksi yang tercatat. Punya foto resep? Pakai <a href="resep.html">Baca resep</a>.</p>
+        <section class="panel sec">
+            <h2>Pilih obat</h2>
+            <div id="chips" class="chips"></div>
+            <p><input id="tambah" list="daftar" placeholder="Ketik nama obat lalu Tambah"> <button class="btn" id="btnTambah" type="button">Tambah</button></p>
+            <datalist id="daftar"></datalist>
+        </section>
+        <section class="panel sec"><h2>Hasil</h2><div id="hasil"></div></section>
+        <details class="panel sec"><summary>Interaksi apa saja yang dicakup?</summary>
+            <p class="muted">Hanya yang tercatat di ISO 2021 dan Martindale. Daftar ini terbatas, jadi hasil "tidak ada interaksi" belum menjamin aman.</p>
+            <ul id="cakupan" class="bul"></ul></details>
+    </main>
+    <footer class="site-footer"><div class="wrap"><p>Informasi di situs ini bersifat edukasi dan tidak menggantikan saran dokter atau apoteker.</p><p>© 2026 Medwise</p></div></footer>
+    <script src="data%20(3).js"></script>
+    <script src="data-en.js"></script>
+    <script src="interaksi.js"></script>
+    <script src="language.js"></script>
+    <script src="engine.js"></script>
+    <script src="resep.js"></script>
+</body>
+</html>

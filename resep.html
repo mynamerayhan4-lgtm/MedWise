@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baca resep dan cek interaksi – Medwise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header"><div class="wrap bar"><a class="logo" href="index.html">Med<span>wise</span></a><nav class="nav" style="display:flex"><a href="kesehatan.html">Tensi dan gula</a><a href="obat.html">Semua obat</a></nav></div></header>
+    <main class="wrap page">
+        <h1>Baca resep dan cek interaksi</h1>
+        <p class="muted">Unggah foto resep, lalu Medwise mencocokkan nama obatnya dan memeriksa interaksi antar obat. Foto diproses di browsermu dan tidak dikirim ke server kami. Hasil bacaan paling baik untuk resep cetak. Tulisan tangan dokter sering gagal terbaca, jadi selalu periksa dan ubah daftar di langkah 2.</p>
+        <section class="panel sec">
+            <h2>1. Foto resep</h2>
+            <input type="file" id="foto" accept="image/*">
+            <img id="prev" alt="Pratinjau resep" hidden>
+            <p><button class="btn" id="baca" type="button">Baca resep</button> <span id="stat" class="muted"></span></p>
+            <details><summary>Teks hasil bacaan (bisa diedit atau ditempel manual)</summary>
+                <textarea id="teks" rows="5" placeholder="Teks resep muncul di sini"></textarea>
+                <button class="btn line" id="cocok" type="button">Cocokkan teks</button>
+            </details>
+        </section>
+        <section class="panel sec" id="obat">
+            <h2>2. Daftar obat</h2>
+            <div id="chips" class="chips"></div>
+            <p><input id="tambah" list="daftar" placeholder="Ketik nama obat lalu Tambah"> <button class="btn" id="btnTambah" type="button">Tambah</button></p>
+            <datalist id="daftar"></datalist>
+        </section>
+        <section class="panel sec">
+            <h2>3. Hasil</h2>
+            <div id="hasil"></div>
+        </section>
+        <p class="muted">Database interaksi Medwise masih terbatas pada obat yang tercatat di ISO 2021 dan Martindale. Tidak adanya interaksi di sini bukan berarti aman. Tanyakan selalu kepada dokter atau apoteker.</p>
+    </main>
+    <footer class="site-footer"><div class="wrap"><p>Informasi di situs ini bersifat edukasi dan tidak menggantikan saran dokter atau apoteker.</p><p>© 2026 Medwise</p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="data%20(3).js"></script>
+    <script src="data-en.js"></script>
+    <script src="interaksi.js"></script>
+    <script src="language.js"></script>
+    <script src="engine.js"></script>
+    <script src="resep.js"></script>
+</body>
+</html>

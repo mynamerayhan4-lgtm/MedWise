@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medwise – Informasi obat dan kesehatan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap bar">
+            <a class="logo" href="#">Med<span>wise</span></a>
+            <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+            <nav id="nav" class="nav">
+                <a href="#telusuri">Daftar obat A–Z</a>
+                <a href="resep.html">Baca resep</a>
+                <a href="kesehatan.html">Tensi dan gula</a>
+                <a href="#berita">Berita</a>
+                <a href="#" class="btn-line">Masuk</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <h1>Kenali obatmu sebelum diminum.</h1>
+                    <p class="lead">Dosis, efek samping, dan interaksi obat dalam bahasa yang mudah dipahami.</p>
+                    <form class="search" id="searchForm" role="search" autocomplete="off">
+                        <label for="q" class="sr">Cari obat atau kondisi</label>
+                        <input id="q" type="search" placeholder="Cari nama obat, kondisi, atau gejala">
+                        <button type="submit">Cari</button>
+                        <ul id="suggest" class="suggest" hidden></ul>
+                    </form>
+                    <p class="trend">Sering dicari: <a href="obat.html?id=paracetamol">Paracetamol</a><a href="obat.html?id=amoxicillin">Amoxicillin</a><a href="obat.html?id=ibuprofen">Ibuprofen</a><a href="obat.html?id=metformin">Metformin</a><a href="obat.html?id=omeprazole">Omeprazole</a></p>
+                </div>
+                <aside class="hero-side" aria-label="Fakta singkat">
+                    <p class="big" id="jumlahObat">41 obat</p>
+                    <p>obat umum di Indonesia, dari ISO, Martindale, dan Fornas</p>
+                    <hr>
+                    <p class="big">Foto resep</p>
+                    <p>unggah resep cetak, lihat penjelasan obat dan interaksinya</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="tools" id="alat">
+            <div class="wrap tools-row">
+                <a href="resep.html"><strong>Baca resep</strong><span>Foto resep, lihat penjelasan obat</span></a>
+                <a href="interaksi.html"><strong>Cek interaksi</strong><span>Periksa obat yang dipakai bersamaan</span></a>
+                <a href="daftar-saya.html"><strong>Daftar obat saya</strong><span>Simpan obat yang kamu minum</span></a>
+                <a href="dosis.html"><strong>Panduan dosis</strong><span>Dosis dewasa, anak, dan lansia</span></a>
+                <a href="kesehatan.html"><strong>Tensi dan gula darah</strong><span>Cek hasil ukur dan catat riwayat</span></a>
+            </div>
+        </section>
+
+        <section class="browse wrap" id="telusuri">
+            <div class="panel">
+                <div class="tabs" role="tablist">
+                    <button role="tab" aria-selected="true" data-tab="obat">Obat</button>
+                    <button role="tab" aria-selected="false" data-tab="kondisi">Kondisi</button>
+                    <button role="tab" aria-selected="false" data-tab="gejala">Gejala</button>
+                </div>
+                <p id="tabHint" class="hint">Pilih huruf pertama nama obat.</p>
+                <div id="az" class="az"></div>
+            </div>
+            <div class="panel">
+                <h2>Jelajahi situs</h2>
+                <ul class="links">
+                    <li><a href="obat.html">Daftar obat A–Z</a></li>
+                    <li><a href="interaksi.html">Cek interaksi obat</a></li>
+                    <li><a href="obat.html">Cari informasi dan efek samping obat</a></li>
+                    <li><a href="https://cekbpom.pom.go.id/" target="_blank" rel="noopener">Cek izin edar di BPOM</a></li>
+                    <li><a href="dosis.html">Panduan dosis</a></li>
+                    <li><a href="kesehatan.html">Cek tekanan darah dan gula darah</a></li>
+                    <li><a href="daftar-saya.html">Kelola obat dan siapkan daftar untuk tenaga kesehatan</a></li>
+                    <li><a href="resep.html">Baca resep dari foto</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="browse wrap" id="umum" style="grid-template-columns:1fr"><div class="panel"><h2>Obat umum di Indonesia</h2><p class="chips" id="kelas"></p><ul class="links" id="popular" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))"></ul></div></section>
+        <section class="news wrap" id="berita">
+            <h2>Kabar terbaru seputar obat</h2>
+            <ul class="newslist">
+                <li><a href="https://megapolitan.antaranews.com/berita/552687/bpom-edukasi-ratusan-warga-ancol-jakut-tentang-penggunaan-obat-yang-aman" target="_blank" rel="noopener">BPOM edukasi ratusan warga Ancol Jakut tentang penggunaan obat yang aman</a>
+                    <small>ANTARA · 2 Okt 2026</small>
+                    <p>BBPOM Jakarta mengajak warga mengelola obat di rumah: beli dari sumber berizin, pakai obat keras sesuai resep, dan buang obat rusak atau kedaluwarsa dengan benar. Warga juga diingatkan memakai Cek KLIK sebelum membeli atau minum obat.</p></li>
+                <li><a href="https://www.pom.go.id/siaran-pers/bpom-temukan-gudang-penyimpanan-obat-bahan-alam-suplemen-kesehatan-dan-kosmetik-ilegal-bernilai-puluhan-miliar-rupiah-di-tangerang" target="_blank" rel="noopener">BPOM temukan gudang obat bahan alam, suplemen kesehatan, dan kosmetik ilegal di Tangerang</a>
+                    <small>BPOM · siaran pers 30 Sep 2026</small>
+                    <p>Nilai barang yang ditemukan mencapai puluhan miliar rupiah.</p></li>
+                <li><a href="https://www.pom.go.id/siaran-pers/bpom-ungkap-pyrimidenafil-sebagai-modus-baru-temuan-obat-bahan-alam-mengandung-bko" target="_blank" rel="noopener">BPOM ungkap pyrimidenafil sebagai modus baru obat bahan alam mengandung BKO</a>
+                    <small>BPOM · siaran pers 10 Sep 2026</small>
+                    <p>BPOM menemukan jenis bahan kimia obat (BKO) baru yang dicampurkan ke obat bahan alam.</p></li>
+                <li><a href="https://www.pom.go.id/siaran-pers/jangan-tertipu-klaim-alami-bpom-temukan-31-obat-bahan-alam-dan-suplemen-kesehatan-ilegal-mengandung-bko" target="_blank" rel="noopener">Jangan tertipu klaim alami, BPOM temukan 31 obat bahan alam dan suplemen ilegal mengandung BKO</a>
+                    <small>BPOM · siaran pers 10 Sep 2026</small></li>
+                <li><a href="https://www.pom.go.id/berita/bpom-dorong-akses-obat-inovatif-yang-aman-guna-jamin-ketahanan-kesehatan-masyarakat" target="_blank" rel="noopener">BPOM dorong akses obat inovatif yang aman guna jamin ketahanan kesehatan masyarakat</a>
+                    <small>BPOM · berita Juli 2026</small>
+                    <p>Kepala BPOM meninjau pusat distribusi obat nasional di Cikarang untuk memastikan rantai pasok sesuai standar, dan meminta pelaku usaha memperkuat pengawasan keamanan obat setelah beredar (farmakovigilans).</p></li>
+            </ul>
+            <p class="muted">Setiap judul menautkan ke sumber aslinya. <a href="https://www.pom.go.id/siaran-pers" target="_blank" rel="noopener">Semua siaran pers BPOM</a> · <a href="https://cekbpom.pom.go.id/" target="_blank" rel="noopener">Cek izin edar produk di CekBPOM</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p class="logo">Med<span>wise</span></p>
+            <p>Informasi di situs ini bersifat edukasi dan tidak menggantikan saran dokter atau apoteker.</p>
+            <p>© 2026 Medwise</p>
+        </div>
+    </footer>
+    
+    <script src="data%20(3).js"></script>
+    <script src="data-en.js"></script>
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
